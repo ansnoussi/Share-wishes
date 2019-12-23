@@ -16,6 +16,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar6)
+
+        nav_view.setOnNavigationItemSelectedListener {
+            if(it.itemId == R.id.navigation_home){
+                return@setOnNavigationItemSelectedListener true
+            }else if(it.itemId == R.id.navigation_favourite){
+                return@setOnNavigationItemSelectedListener true
+            }
+            return@setOnNavigationItemSelectedListener true
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
